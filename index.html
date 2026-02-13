@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propose Day 💕</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:linear-gradient(135deg,#ffeef8,#ffe4f1,#ffd4e9);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.header{text-align:center;margin-bottom:40px;}
+.header h1{font-size:3em;color:#d63384;}
+.header p{color:#e75480;font-style:italic;}
+
+.media-box{
+    width:100%;
+    max-width:700px;
+    margin:25px auto;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(214,51,132,.2);
+}
+
+/* Aspect ratios */
+.ratio-7-7{aspect-ratio:7/7;}
+.ratio-7-5{aspect-ratio:7/5;}
+.ratio-7-1{aspect-ratio:7/1;}
+.ratio-1-1{aspect-ratio:1/1;}
+
+.media-box img,
+.media-box video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Envelope */
+.envelope-section{
+    display:flex;
+    justify-content:center;
+    margin:60px 0;
+}
+
+.envelope-container{cursor:pointer;position:relative;}
+.envelope-container:hover{transform:scale(1.05);}
+
+.envelope{
+    width:280px;
+    height:180px;
+    position:relative;
+}
+
+.envelope-back{
+    width:100%;
+    height:100%;
+    background:#fff0f6;
+    border:3px solid #ff6b9d;
+}
+
+.envelope-flap{
+    width:0;height:0;
+    border-left:140px solid transparent;
+    border-right:140px solid transparent;
+    border-top:100px solid #ff85a8;
+    position:absolute;
+    top:0;
+    transform-origin:top center;
+    transition:.6s;
+}
+
+.envelope-container.opened .envelope-flap{
+    transform:rotateX(180deg);
+}
+
+.envelope-label{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    color:#d63384;
+    font-weight:600;
+}
+
+.tap-hint{
+    position:absolute;
+    bottom:-35px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#e75480;
+}
+
+/* Message card */
+.message-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(214,51,132,.2);
+    max-width:650px;
+    margin:40px auto;
+    opacity:0;
+    transform:translateY(30px);
+    transition:.6s;
+}
+
+.message-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.message-card p{
+    color:#d63384;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.question{
+    text-align:center;
+    font-size:1.4em;
+    font-weight:700;
+}
+
+.signature{
+    text-align:right;
+    font-style:italic;
+}
+
+/* Floating hearts */
+.heart-balloon{
+    position:fixed;
+    bottom:-100px;
+    font-size:2em;
+    animation:floatUp 8s linear infinite;
+}
+
+@keyframes floatUp{
+    from{bottom:-100px;}
+    to{bottom:110vh;}
+}
+
+@media(max-width:768px){
+    .header h1{font-size:2em;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>💕 Propose Day 💕</h1>
+<p>A special day for my special someone</p>
+</div>
+
+<!-- Proposeday4 (7:7 image) -->
+<div class="media-box ratio-7-7">
+<img src="Proposeday4.jpg">
+</div>
+
+<!-- Envelope -->
+<div class="envelope-section">
+<div class="envelope-container" id="envelopeContainer">
+<div class="envelope">
+<div class="envelope-back"></div>
+<div class="envelope-flap"></div>
+<div class="envelope-label">Tap to Open 💌</div>
+</div>
+<div class="tap-hint">Click me</div>
+</div>
+</div>
+
+<!-- Message -->
+<div class="message-card" id="messageCard">
+<p>Me tumhe dilo jaan se chahta hu vero Now that u are already my girlfriend i would still propose you babyy caz why not ^^ you are my honey bunny </p>
+
+<p>Kash me bhi tumhe dekh ke contact kr pata tumhare sath in person i would stare at u so much you are really beautiful so so </p>
+
+<p>Me tumse bohot pyar krta hu sote jagte khate pite bas tumhara hi naam japta hu kya kru tum ho ki jaati hi nhi ho mere dimag se </p>
+
+<p>Ab khair tum itni hi ziddi ho toh reh lo mere dilo dimag me aur me krunga tumse pyar bohot jyada humesha </p>
+
+<p class="question">
+Will you be my valentine babyy? <br>
+Yes or Yes? 
+</p>
+
+<p class="signature">~ Forever Yours </p>
+</div>
+
+<!-- Proposeday5 banner (7:10 image) -->
+<div class="media-box ratio-7-10">
+<img src="Proposeday5.jpg">
+</div>
+
+<!-- Proposeday1 (7:5 image) -->
+<div class="media-box ratio-7-5">
+<img src="Proposeday1.jpg">
+</div>
+
+<!-- Proposeday3 (1:1 image) -->
+<div class="media-box ratio-1-1">
+<img src="Proposeday3.jpg">
+</div>
+
+<!-- Proposeday2 video (7:7 video) -->
+<div class="media-box ratio-7-7">
+    <video src="Proposeday2.mp4" controls loop playsinline></video>
+</div>
+
+</div>
+
+<script>
+const envelopeContainer=document.getElementById('envelopeContainer');
+const messageCard=document.getElementById('messageCard');
+
+envelopeContainer.addEventListener('click',function(){
+    this.classList.add('opened');
+    setTimeout(()=>{
+        messageCard.classList.add('show');
+        messageCard.scrollIntoView({behavior:'smooth'});
+    },300);
+});
+
+function createHeart(){
+    const heart=document.createElement('div');
+    heart.className='heart-balloon';
+    heart.innerText=['💕','💗','💖','💝'][Math.floor(Math.random()*4)];
+    heart.style.left=Math.random()*100+'%';
+    heart.style.animationDuration=(Math.random()*3+6)+'s';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),9000);
+}
+setInterval(createHeart,800);
+</script>
+
+</body>
+</html>
